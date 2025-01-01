@@ -1,0 +1,10 @@
+C:\Users\Artyom Ugreninov\source\repos\ArZhTextRedactor\ArZhTextRedactor\bin\Debug\ArZhTextRedactor.exe.config
+C:\Users\Artyom Ugreninov\source\repos\ArZhTextRedactor\ArZhTextRedactor\bin\Debug\ArZhTextRedactor.exe
+C:\Users\Artyom Ugreninov\source\repos\ArZhTextRedactor\ArZhTextRedactor\bin\Debug\ArZhTextRedactor.pdb
+C:\Users\Artyom Ugreninov\source\repos\ArZhTextRedactor\ArZhTextRedactor\obj\Debug\ArZhTextRedactor.csproj.AssemblyReference.cache
+C:\Users\Artyom Ugreninov\source\repos\ArZhTextRedactor\ArZhTextRedactor\obj\Debug\ArZhTextRedactor.Form1.resources
+C:\Users\Artyom Ugreninov\source\repos\ArZhTextRedactor\ArZhTextRedactor\obj\Debug\ArZhTextRedactor.Properties.Resources.resources
+C:\Users\Artyom Ugreninov\source\repos\ArZhTextRedactor\ArZhTextRedactor\obj\Debug\ArZhTextRedactor.csproj.GenerateResource.cache
+C:\Users\Artyom Ugreninov\source\repos\ArZhTextRedactor\ArZhTextRedactor\obj\Debug\ArZhTextRedactor.csproj.CoreCompileInputs.cache
+C:\Users\Artyom Ugreninov\source\repos\ArZhTextRedactor\ArZhTextRedactor\obj\Debug\ArZhTextRedactor.exe
+C:\Users\Artyom Ugreninov\source\repos\ArZhTextRedactor\ArZhTextRedactor\obj\Debug\ArZhTextRedactor.pdb
