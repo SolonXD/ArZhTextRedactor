@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ArZhTextRedactor"
   ],
-  "SelectedNode": "\\CSharp.sln",
+  "SelectedNode": "\\ArZhTextRedactor\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
