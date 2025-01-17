@@ -53,6 +53,9 @@
             this.colorStripDropDownButton = new System.Windows.Forms.ToolStripDropDownButton();
             this.fontSizeComboBox = new System.Windows.Forms.ToolStripComboBox();
             this.fontStripComboBox = new System.Windows.Forms.ToolStripComboBox();
+            this.BoldStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.ItalicStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.UnderlineStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -97,28 +100,28 @@
             // создатьФайлToolStripMenuItem
             // 
             this.создатьФайлToolStripMenuItem.Name = "создатьФайлToolStripMenuItem";
-            this.создатьФайлToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.создатьФайлToolStripMenuItem.Size = new System.Drawing.Size(201, 26);
             this.создатьФайлToolStripMenuItem.Text = "Создать файл...";
             this.создатьФайлToolStripMenuItem.Click += new System.EventHandler(this.создатьФайлToolStripMenuItem_Click);
             // 
             // открытьФайлToolStripMenuItem
             // 
             this.открытьФайлToolStripMenuItem.Name = "открытьФайлToolStripMenuItem";
-            this.открытьФайлToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.открытьФайлToolStripMenuItem.Size = new System.Drawing.Size(201, 26);
             this.открытьФайлToolStripMenuItem.Text = "Открыть файл...";
             this.открытьФайлToolStripMenuItem.Click += new System.EventHandler(this.открытьФайлToolStripMenuItem_Click);
             // 
             // сохранитьToolStripMenuItem
             // 
             this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
-            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(201, 26);
             this.сохранитьToolStripMenuItem.Text = "Сохранить";
             this.сохранитьToolStripMenuItem.Click += new System.EventHandler(this.сохранитьToolStripMenuItem_Click);
             // 
             // сохранитьКакToolStripMenuItem
             // 
             this.сохранитьКакToolStripMenuItem.Name = "сохранитьКакToolStripMenuItem";
-            this.сохранитьКакToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.сохранитьКакToolStripMenuItem.Size = new System.Drawing.Size(201, 26);
             this.сохранитьКакToolStripMenuItem.Text = "Сохранить как...";
             this.сохранитьКакToolStripMenuItem.Click += new System.EventHandler(this.сохранитьКакToolStripMenuItem_Click);
             // 
@@ -202,7 +205,10 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.colorStripDropDownButton,
             this.fontSizeComboBox,
-            this.fontStripComboBox});
+            this.fontStripComboBox,
+            this.BoldStripButton1,
+            this.ItalicStripButton2,
+            this.UnderlineStripButton3});
             this.toolStrip1.Location = new System.Drawing.Point(0, 30);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(644, 31);
@@ -232,6 +238,36 @@
             this.fontStripComboBox.Size = new System.Drawing.Size(121, 31);
             this.fontStripComboBox.Text = "Выберите шрифт";
             this.fontStripComboBox.SelectedIndexChanged += new System.EventHandler(this.fontStripComboBox_SelectedIndexChanged_1);
+            // 
+            // BoldStripButton1
+            // 
+            this.BoldStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BoldStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("BoldStripButton1.Image")));
+            this.BoldStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BoldStripButton1.Name = "BoldStripButton1";
+            this.BoldStripButton1.Size = new System.Drawing.Size(29, 28);
+            this.BoldStripButton1.Text = "toolStripButton1";
+            this.BoldStripButton1.Click += new System.EventHandler(this.BoldStripButton1_Click);
+            // 
+            // ItalicStripButton2
+            // 
+            this.ItalicStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ItalicStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("ItalicStripButton2.Image")));
+            this.ItalicStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ItalicStripButton2.Name = "ItalicStripButton2";
+            this.ItalicStripButton2.Size = new System.Drawing.Size(29, 28);
+            this.ItalicStripButton2.Text = "toolStripButton2";
+            this.ItalicStripButton2.Click += new System.EventHandler(this.ItalicStripButton2_Click);
+            // 
+            // UnderlineStripButton3
+            // 
+            this.UnderlineStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.UnderlineStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("UnderlineStripButton3.Image")));
+            this.UnderlineStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.UnderlineStripButton3.Name = "UnderlineStripButton3";
+            this.UnderlineStripButton3.Size = new System.Drawing.Size(29, 28);
+            this.UnderlineStripButton3.Text = "toolStripButton3";
+            this.UnderlineStripButton3.Click += new System.EventHandler(this.UnderlineStripButton3_Click);
             // 
             // Form1
             // 
@@ -281,6 +317,9 @@
         private System.Windows.Forms.ToolStripDropDownButton colorStripDropDownButton;
         private System.Windows.Forms.ToolStripComboBox fontSizeComboBox;
         private System.Windows.Forms.ToolStripComboBox fontStripComboBox;
+        private System.Windows.Forms.ToolStripButton BoldStripButton1;
+        private System.Windows.Forms.ToolStripButton ItalicStripButton2;
+        private System.Windows.Forms.ToolStripButton UnderlineStripButton3;
     }
 }
 

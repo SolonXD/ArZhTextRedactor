@@ -252,6 +252,97 @@ namespace CSharp
             }
         }
 
-        
+        private void BoldStripButton1_Click(object sender, EventArgs e)
+        {
+            if (BoldStripButton1.Checked == false)
+            {
+                BoldStripButton1.Checked = true; 
+            }
+            else if (BoldStripButton1.Checked == true)
+            {
+                BoldStripButton1.Checked = false;    
+            }
+
+            if (richTextBox1.SelectionFont == null)
+            {
+                return;
+            }
+
+           
+            FontStyle style = richTextBox1.SelectionFont.Style;
+
+            
+            if (richTextBox1.SelectionFont.Bold)
+            {
+                style &= ~FontStyle.Bold;
+            }
+            else
+            {
+                style |= FontStyle.Bold;
+
+            }
+            richTextBox1.SelectionFont = new Font(richTextBox1.SelectionFont, style);
+        }
+
+        private void ItalicStripButton2_Click(object sender, EventArgs e)
+        {
+            if (ItalicStripButton2.Checked == false)
+            {
+                ItalicStripButton2.Checked = true;    
+            }
+            else if (ItalicStripButton2.Checked == true)
+            {
+                ItalicStripButton2.Checked = false;    
+            }
+
+            if (richTextBox1.SelectionFont == null)
+            {
+                return;
+            }
+           
+            FontStyle style = richTextBox1.SelectionFont.Style;
+
+           
+            if (richTextBox1.SelectionFont.Italic)
+            {
+                style &= ~FontStyle.Italic;
+            }
+            else
+            {
+                style |= FontStyle.Italic;
+            }
+            richTextBox1.SelectionFont = new Font(richTextBox1.SelectionFont, style);
+        }
+
+        private void UnderlineStripButton3_Click(object sender, EventArgs e)
+        {
+            if (UnderlineStripButton3.Checked == false)
+            {
+                UnderlineStripButton3.Checked = true;     
+            }
+            else if (UnderlineStripButton3.Checked == true)
+            {
+                UnderlineStripButton3.Checked = false;    
+            }
+
+            if (richTextBox1.SelectionFont == null)
+            {
+                return;
+            }
+
+            
+            FontStyle style = richTextBox1.SelectionFont.Style;
+
+           
+            if (richTextBox1.SelectionFont.Underline)
+            {
+                style &= ~FontStyle.Underline;
+            }
+            else
+            {
+                style |= FontStyle.Underline;
+            }
+            richTextBox1.SelectionFont = new Font(richTextBox1.SelectionFont, style);
+        }
     }
 }
