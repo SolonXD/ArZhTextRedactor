@@ -344,5 +344,51 @@ namespace CSharp
             }
             richTextBox1.SelectionFont = new Font(richTextBox1.SelectionFont, style);
         }
+
+        private void leftAlignStripButton_Click(object sender, EventArgs e)
+        {
+            centerAlignStripButton.Checked = false;
+            rightAlignStripButton.Checked = false;
+            if (leftAlignStripButton.Checked == false)
+            {
+                leftAlignStripButton.Checked = true;   
+            }
+            else if (leftAlignStripButton.Checked == true)
+            {
+                leftAlignStripButton.Checked = false;    
+            }
+            richTextBox1.SelectionAlignment = HorizontalAlignment.Left;
+        }
+
+        private void centerAlignStripButton_Click(object sender, EventArgs e)
+        {
+            leftAlignStripButton.Checked = false;
+            rightAlignStripButton.Checked = false;
+            if (centerAlignStripButton.Checked == false)
+            {
+                centerAlignStripButton.Checked = true;   
+            }
+            else if (centerAlignStripButton.Checked == true)
+            {
+                centerAlignStripButton.Checked = false;    
+            }
+            richTextBox1.SelectionAlignment = HorizontalAlignment.Center;
+        }
+
+        private void rightAlignStripButton_Click(object sender, EventArgs e)
+        {
+            leftAlignStripButton.Checked = false;
+            centerAlignStripButton.Checked = false;
+
+            if (rightAlignStripButton.Checked == false)
+            {
+                rightAlignStripButton.Checked = true;    
+            }
+            else if (rightAlignStripButton.Checked == true)
+            {
+                rightAlignStripButton.Checked = false;    
+            }
+            richTextBox1.SelectionAlignment = HorizontalAlignment.Right;
+        }
     }
 }

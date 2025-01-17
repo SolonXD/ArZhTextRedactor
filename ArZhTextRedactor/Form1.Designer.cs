@@ -56,6 +56,9 @@
             this.BoldStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.ItalicStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.UnderlineStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.leftAlignStripButton = new System.Windows.Forms.ToolStripButton();
+            this.centerAlignStripButton = new System.Windows.Forms.ToolStripButton();
+            this.rightAlignStripButton = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -63,10 +66,10 @@
             // richTextBox1
             // 
             this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Location = new System.Drawing.Point(0, 61);
+            this.richTextBox1.Location = new System.Drawing.Point(0, 56);
             this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(644, 349);
+            this.richTextBox1.Size = new System.Drawing.Size(644, 354);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
@@ -82,7 +85,7 @@
             this.правкаToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(644, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(644, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -94,7 +97,7 @@
             this.сохранитьToolStripMenuItem,
             this.сохранитьКакToolStripMenuItem});
             this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
-            this.файлToolStripMenuItem.Size = new System.Drawing.Size(59, 26);
+            this.файлToolStripMenuItem.Size = new System.Drawing.Size(59, 24);
             this.файлToolStripMenuItem.Text = "Файл";
             // 
             // создатьФайлToolStripMenuItem
@@ -131,7 +134,7 @@
             this.настройкаФонаToolStripMenuItem,
             this.шрифтToolStripMenuItem});
             this.видToolStripMenuItem.Name = "видToolStripMenuItem";
-            this.видToolStripMenuItem.Size = new System.Drawing.Size(49, 26);
+            this.видToolStripMenuItem.Size = new System.Drawing.Size(49, 24);
             this.видToolStripMenuItem.Text = "Вид";
             // 
             // настройкаФонаToolStripMenuItem
@@ -164,7 +167,7 @@
             this.вырезатьToolStripMenuItem,
             this.выделитьВсеToolStripMenuItem});
             this.правкаToolStripMenuItem.Name = "правкаToolStripMenuItem";
-            this.правкаToolStripMenuItem.Size = new System.Drawing.Size(74, 26);
+            this.правкаToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
             this.правкаToolStripMenuItem.Text = "Правка";
             // 
             // копироватьToolStripMenuItem
@@ -208,10 +211,13 @@
             this.fontStripComboBox,
             this.BoldStripButton1,
             this.ItalicStripButton2,
-            this.UnderlineStripButton3});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 30);
+            this.UnderlineStripButton3,
+            this.leftAlignStripButton,
+            this.centerAlignStripButton,
+            this.rightAlignStripButton});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 28);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(644, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(644, 28);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -221,21 +227,21 @@
             this.colorStripDropDownButton.Image = ((System.Drawing.Image)(resources.GetObject("colorStripDropDownButton.Image")));
             this.colorStripDropDownButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.colorStripDropDownButton.Name = "colorStripDropDownButton";
-            this.colorStripDropDownButton.Size = new System.Drawing.Size(127, 28);
+            this.colorStripDropDownButton.Size = new System.Drawing.Size(127, 25);
             this.colorStripDropDownButton.Text = "Выберите цвет";
             this.colorStripDropDownButton.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.colorStripDropDownButton_DropDownItemClicked);
             // 
             // fontSizeComboBox
             // 
             this.fontSizeComboBox.Name = "fontSizeComboBox";
-            this.fontSizeComboBox.Size = new System.Drawing.Size(121, 31);
+            this.fontSizeComboBox.Size = new System.Drawing.Size(121, 28);
             this.fontSizeComboBox.Text = "Выберите размер";
             this.fontSizeComboBox.SelectedIndexChanged += new System.EventHandler(this.fontSizeComboBox_SelectedIndexChanged_1);
             // 
             // fontStripComboBox
             // 
             this.fontStripComboBox.Name = "fontStripComboBox";
-            this.fontStripComboBox.Size = new System.Drawing.Size(121, 31);
+            this.fontStripComboBox.Size = new System.Drawing.Size(121, 28);
             this.fontStripComboBox.Text = "Выберите шрифт";
             this.fontStripComboBox.SelectedIndexChanged += new System.EventHandler(this.fontStripComboBox_SelectedIndexChanged_1);
             // 
@@ -269,6 +275,39 @@
             this.UnderlineStripButton3.Text = "toolStripButton3";
             this.UnderlineStripButton3.Click += new System.EventHandler(this.UnderlineStripButton3_Click);
             // 
+            // leftAlignStripButton
+            // 
+            this.leftAlignStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.leftAlignStripButton.Image = ((System.Drawing.Image)(resources.GetObject("leftAlignStripButton.Image")));
+            this.leftAlignStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.leftAlignStripButton.Name = "leftAlignStripButton";
+            this.leftAlignStripButton.Size = new System.Drawing.Size(29, 28);
+            this.leftAlignStripButton.Text = "toolStripButton1";
+            this.leftAlignStripButton.ToolTipText = "leftAlignStripButton";
+            this.leftAlignStripButton.Click += new System.EventHandler(this.leftAlignStripButton_Click);
+            // 
+            // centerAlignStripButton
+            // 
+            this.centerAlignStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.centerAlignStripButton.Image = ((System.Drawing.Image)(resources.GetObject("centerAlignStripButton.Image")));
+            this.centerAlignStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.centerAlignStripButton.Name = "centerAlignStripButton";
+            this.centerAlignStripButton.Size = new System.Drawing.Size(29, 28);
+            this.centerAlignStripButton.Text = "toolStripButton1";
+            this.centerAlignStripButton.ToolTipText = "centerAlignStripButton";
+            this.centerAlignStripButton.Click += new System.EventHandler(this.centerAlignStripButton_Click);
+            // 
+            // rightAlignStripButton
+            // 
+            this.rightAlignStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.rightAlignStripButton.Image = ((System.Drawing.Image)(resources.GetObject("rightAlignStripButton.Image")));
+            this.rightAlignStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.rightAlignStripButton.Name = "rightAlignStripButton";
+            this.rightAlignStripButton.Size = new System.Drawing.Size(29, 28);
+            this.rightAlignStripButton.Text = "toolStripButton1";
+            this.rightAlignStripButton.ToolTipText = "rightAlignStripButton";
+            this.rightAlignStripButton.Click += new System.EventHandler(this.rightAlignStripButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -277,10 +316,11 @@
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
-            this.Text = "Текстовый редактор";
+            this.Text = "BobickText";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
@@ -320,6 +360,9 @@
         private System.Windows.Forms.ToolStripButton BoldStripButton1;
         private System.Windows.Forms.ToolStripButton ItalicStripButton2;
         private System.Windows.Forms.ToolStripButton UnderlineStripButton3;
+        private System.Windows.Forms.ToolStripButton leftAlignStripButton;
+        private System.Windows.Forms.ToolStripButton centerAlignStripButton;
+        private System.Windows.Forms.ToolStripButton rightAlignStripButton;
     }
 }
 
