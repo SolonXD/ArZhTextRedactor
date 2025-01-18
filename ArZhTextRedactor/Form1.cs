@@ -18,8 +18,8 @@ namespace CSharp
         static string open_path = "";
         static string filename = "";
         List<string> colorList = new List<string>();
-        const int MIDDLE = 382;    // middle sum of RGB - max is 765
-        int sumRGB;    // sum of the selected colors RGB
+        const int MIDDLE = 382;   
+        int sumRGB;    
         public Form1()
         {
             InitializeComponent();
@@ -42,35 +42,31 @@ namespace CSharp
                 }
             }
 
-            // fill the drop down items list
+     
             foreach (string color in colorList)
             {
                 colorStripDropDownButton.DropDownItems.Add(color);
             }
             for (int i = 0; i < colorStripDropDownButton.DropDownItems.Count; i++)
             {
-                // Create KnownColor object
+                
                 KnownColor selectedColor;
-                selectedColor = (KnownColor)System.Enum.Parse(typeof(KnownColor), colorList[i]);    // parse to a KnownColor
-                colorStripDropDownButton.DropDownItems[i].BackColor = Color.FromKnownColor(selectedColor);    // set the BackColor to its appropriate list item
+                selectedColor = (KnownColor)System.Enum.Parse(typeof(KnownColor), colorList[i]);    
+                colorStripDropDownButton.DropDownItems[i].BackColor = Color.FromKnownColor(selectedColor);    
 
-                // Set the text color depending on if the barkground is darker or lighter
-                // create Color object
+               
                 Color col = Color.FromName(colorList[i]);
 
-                // 255,255,255 = White and 0,0,0 = Black
-                // Max sum of RGB values is 765 -> (255 + 255 + 255)
-                // Middle sum of RGB values is 382 -> (765/2)
-                // Color is considered darker if its <= 382
-                // Color is considered lighter if its > 382
-                sumRGB = ConvertToRGB(col);    // get the color objects sum of the RGB value
-                if (sumRGB <= MIDDLE)    // Darker Background
+                
+                
+                sumRGB = ConvertToRGB(col);    
+                if (sumRGB <= MIDDLE)    
                 {
-                    colorStripDropDownButton.DropDownItems[i].ForeColor = Color.White;    // set to White text
+                    colorStripDropDownButton.DropDownItems[i].ForeColor = Color.White;    
                 }
-                else if (sumRGB > MIDDLE)    // Lighter Background
+                else if (sumRGB > MIDDLE)    
                 {
-                    colorStripDropDownButton.DropDownItems[i].ForeColor = Color.Black;    // set to Black text
+                    colorStripDropDownButton.DropDownItems[i].ForeColor = Color.Black;    
                 }
             }
             InstalledFontCollection fonts = new InstalledFontCollection();
@@ -82,12 +78,12 @@ namespace CSharp
         }
         private int ConvertToRGB(System.Drawing.Color c)
         {
-            int r = c.R, // RED component value
-                g = c.G, // GREEN component value
-                b = c.B; // BLUE component value
+            int r = c.R, 
+                g = c.G, 
+                b = c.B; 
             int sum = 0;
 
-            // calculate sum of RGB
+            
             sum = r + g + b;
 
             return sum;
@@ -108,7 +104,7 @@ namespace CSharp
             {
                 return;
             }
-            // sets the font size when changed
+           
             richTextBox1.SelectionFont = new Font(richTextBox1.SelectionFont.FontFamily, Convert.ToInt32(fontSizeComboBox.Text), richTextBox1.SelectionFont.Style);
         }
 
@@ -116,10 +112,10 @@ namespace CSharp
         {
             if (richTextBox1.SelectionFont == null)
             {
-                // sets the Font Family style
+                
                 richTextBox1.SelectionFont = new Font(fontStripComboBox.Text, richTextBox1.Font.Size);
             }
-            // sets the selected font famly style
+            
             richTextBox1.SelectionFont = new Font(fontStripComboBox.Text, richTextBox1.SelectionFont.Size);
         }
         private void richTextBox1_TextChanged(object sender, EventArgs e)
@@ -252,35 +248,29 @@ namespace CSharp
             }
         }
 
+        private void CheckStyleButton()
+        {
+            if (richTextBox1.SelectionFont is null)
+                return;
+
+
+        }
+
         private void BoldStripButton1_Click(object sender, EventArgs e)
         {
-            if (BoldStripButton1.Checked == false)
-            {
-                BoldStripButton1.Checked = true; 
-            }
-            else if (BoldStripButton1.Checked == true)
-            {
-                BoldStripButton1.Checked = false;    
-            }
-
-            if (richTextBox1.SelectionFont == null)
-            {
+            if (richTextBox1.SelectionFont is null)
                 return;
-            }
 
+            BoldStripButton1.Checked = !BoldStripButton1.Checked;  
            
+            
             FontStyle style = richTextBox1.SelectionFont.Style;
 
-            
             if (richTextBox1.SelectionFont.Bold)
-            {
                 style &= ~FontStyle.Bold;
-            }
             else
-            {
                 style |= FontStyle.Bold;
 
-            }
             richTextBox1.SelectionFont = new Font(richTextBox1.SelectionFont, style);
         }
 
